@@ -14,6 +14,7 @@ class App extends React.Component {
       cardAttr3: '',
       cardRare: '',
       cardTrunfo: false,
+      airplainCards: [],
     };
   }
 
@@ -55,6 +56,24 @@ class App extends React.Component {
     });
   }
 
+  onSaveButtonClick= () => {
+    const { airplainCards } = this.state;
+    const newAirplain = this.state;
+    delete newAirplain.airplainCards;
+    airplainCards.push(newAirplain);
+    this.setState({
+      cardName: '',
+      cardDescription: '',
+      cardImage: '',
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
+      cardRare: '',
+      cardTrunfo: false,
+      airplainCards,
+    });
+  }
+
   render() {
     const {
       cardName,
@@ -82,6 +101,7 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
           onInputChange={ this.onInputChange }
           isSaveButtonDisabled={ isSaveButtonDisabled }
+          onSaveButtonClick={ this.onSaveButtonClick }
         />
         <Card
           cardName={ cardName }
