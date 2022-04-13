@@ -17,8 +17,8 @@ class App extends React.Component {
     };
   }
 
-  isInputEmpty = (props) => {
-    const { cardName, cardDescription, cardImage, cardRare } = props;
+  isInputEmpty = () => {
+    const { cardName, cardDescription, cardImage, cardRare } = this.state;
     if (
       cardName.length > 0
       && cardDescription.length > 0
@@ -30,8 +30,8 @@ class App extends React.Component {
     return true;
   }
 
-  isAttributionRight = (props) => {
-    let { cardAttr1, cardAttr2, cardAttr3 } = props;
+  isAttributionRight = () => {
+    let { cardAttr1, cardAttr2, cardAttr3 } = this.state;
     cardAttr1 = parseInt(cardAttr1, 10);
     cardAttr2 = parseInt(cardAttr2, 10);
     cardAttr3 = parseInt(cardAttr3, 10);
@@ -46,9 +46,6 @@ class App extends React.Component {
       return false;
     } return true;
   }
-
-  isSaveButtonDisabled = (props) => this
-    .isAttributionRight(props) || this.isInputEmpty(props)
 
   onInputChange = ({ target }) => {
     const { name } = target;
@@ -69,6 +66,9 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
     } = this.state;
+
+    const isSaveButtonDisabled = this.isAttributionRight() || this.isInputEmpty();
+
     return (
       <div>
         <Form
@@ -81,7 +81,7 @@ class App extends React.Component {
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
           onInputChange={ this.onInputChange }
-          isSaveButtonDisabled={ this.isSaveButtonDisabled }
+          isSaveButtonDisabled={ isSaveButtonDisabled }
         />
         <Card
           cardName={ cardName }
