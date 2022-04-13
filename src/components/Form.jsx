@@ -78,6 +78,7 @@ class Form extends React.Component {
               data-testid="rare-input"
               value={ cardRare }
               onChange={ onInputChange }
+              label=" "
             >
               <option value="normal">normal</option>
               <option value="raro">raro</option>
@@ -95,10 +96,11 @@ class Form extends React.Component {
           <button
             data-testid="save-button"
             type="submit"
-            disabled={ isSaveButtonDisabled }
+            disabled={ isSaveButtonDisabled(this.props) }
             onClick={ onSaveButtonClick }
           >
             Salvar
+            {console.log(isSaveButtonDisabled(this.props))}
           </button>
         </form>
       </div>
