@@ -116,6 +116,17 @@ class App extends React.Component {
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
         />
+        { airplainCards.map((airplain) => (<Card
+          key={ airplain.cardName }
+          cardName={ airplain.cardName }
+          cardDescription={ airplain.cardDescription }
+          cardAttr1={ airplain.cardAttr1 }
+          cardAttr2={ airplain.cardAttr2 }
+          cardAttr3={ airplain.cardAttr3 }
+          cardImage={ airplain.cardImage }
+          cardR={ airplain.cardRare }
+          cardTrunfo={ airplain.cardTrunfo }
+        />))}
       </div>
     );
   }
