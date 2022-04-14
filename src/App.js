@@ -84,9 +84,11 @@ class App extends React.Component {
       cardAttr3,
       cardRare,
       cardTrunfo,
+      airplainCards,
     } = this.state;
 
     const isSaveButtonDisabled = this.isAttributionRight() || this.isInputEmpty();
+    const hasTrunfo = airplainCards.some((airplain) => airplain.cardTrunfo === true);
 
     return (
       <div>
@@ -102,6 +104,7 @@ class App extends React.Component {
           onInputChange={ this.onInputChange }
           isSaveButtonDisabled={ isSaveButtonDisabled }
           onSaveButtonClick={ this.onSaveButtonClick }
+          hasTrunfo={ hasTrunfo }
         />
         <Card
           cardName={ cardName }
