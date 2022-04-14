@@ -56,6 +56,14 @@ class App extends React.Component {
     });
   }
 
+  deleteCard = (event) => {
+    const { airplainCards } = this.state;
+    const airplainName = event.target.name;
+    const noneDeck = airplainCards.filter((airplain) => airplain
+      .cardName !== airplainName);
+    this.setState({ airplainCards: noneDeck });
+  }
+
   onSaveButtonClick= () => {
     const { airplainCards } = this.state;
     const newAirplain = this.state;
@@ -126,6 +134,8 @@ class App extends React.Component {
           cardImage={ airplain.cardImage }
           cardR={ airplain.cardRare }
           cardTrunfo={ airplain.cardTrunfo }
+          removeButton
+          deleteCard={ this.deleteCard }
         />))}
       </div>
     );
