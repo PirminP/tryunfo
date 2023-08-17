@@ -1,10 +1,18 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Project Tryunfo
+
+#### This website was built to create cards like the 'Super Trunfo' game. The user of the application will be able to create a deck with a free theme: add, view and remove cards.
+
+* Designed by using React & CSS3
+
+### Instructions
+* To run and start the application locally, clone the project and use the following commands:
+
+  ```
+  npm install // install dependencies
+  npm start // start application
+  ```
+
+## Demonstration
+Access: [Click here]()
+
+![To access]()
