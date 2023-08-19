@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Input extends React.Component {
   render() {
-    const { type, name, testid, label, value, callback } = this.props;
+    const { type, name, testid, label, className, value, callback } = this.props;
     return (
       <label htmlFor={ name }>
         { label }
@@ -12,8 +12,9 @@ class Input extends React.Component {
           type={ type }
           name={ name }
           value={ value }
-          onChange={ callback }
+          className={ className }
           checked={ value }
+          onChange={ callback }
         />
       </label>
     );
@@ -25,6 +26,7 @@ Input.propTypes = {
   name: PropTypes.string.isRequired,
   testid: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   callback: PropTypes.func.isRequired,
 };
