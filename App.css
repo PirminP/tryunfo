@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color:honeydew
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.create-card-div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  width: 50%;
+}
+
+.create-card-div h3 {
+  margin: 20px;
+  font-size: 24px;
+}
+
+.card-form {
+  width: 180px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-form .input {
+  margin: 8px 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.card-form .input-description {
+  height: 30px;
+  margin: 8px 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.card-form .form-attr {
+  margin-left: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 50px;
+}
+
+.card-form .image-path {
+  margin: 8px 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.card-form .form-select {
+  margin-left: 24px;
+  margin-bottom: 10px;
+}
+
+.super-trunfo {
+  align-items: center;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.forms-button {
+  background: #003be5;
+  border: 2px solid #003be5;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: white;
+  height: 40px;
+  margin-top: 30px;
+  max-width: 115px;
+  padding: 8px 32px;
+}
+
+.card-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border: 2px solid #e1e5eb;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 268px;
+}
+
+.card-display h2 {
+  background: #023031;
+  border-radius: 10px 10px 0 0;
+  color: white;
+  height: 40px;
+  margin-top: 10px;
+  min-width: 200px;
+  text-align: center;
+}
+
+.card-display img {
+  background-image: url('https://idealservis.com.br/portal/wp-content/uploads/2014/07/default-placeholder.png');
+  border: solid 1px #036b52;
+  height: 90px;
+  width: 200px;
+}
+
+.card-display .cardDescription {
+  background: #036b52;
+  color: white;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  height: 40px;
+  line-height: 13px;
+  padding: 10px;
+  width: 200px;
+  word-break: break-all;
+}
+
+.card-display .attr {
+  background-color: white;
+  border: 1px solid #e1e5eb;
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: 200px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-display .rareCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.card-display .buttonDelete {
+  margin: 20px;
+}
