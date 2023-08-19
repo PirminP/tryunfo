@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
+import './App.css';
 
 class App extends React.Component {
   constructor() {
@@ -99,7 +100,7 @@ class App extends React.Component {
     const hasTrunfo = airplainCards.some((airplain) => airplain.cardTrunfo === true);
 
     return (
-      <div>
+      <div className="main-container">
         <Form
           cardName={ cardName }
           cardDescription={ cardDescription }
@@ -132,7 +133,7 @@ class App extends React.Component {
           cardAttr2={ airplain.cardAttr2 }
           cardAttr3={ airplain.cardAttr3 }
           cardImage={ airplain.cardImage }
-          cardR={ airplain.cardRare }
+          cardRare={ airplain.cardRare }
           cardTrunfo={ airplain.cardTrunfo }
           removeButton
           deleteCard={ this.deleteCard }
